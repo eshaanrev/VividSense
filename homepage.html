@@ -5,36 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VividSense</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            background: url('images/scenic.jpg') no-repeat center center/cover;
-            height: 100vh;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #000; 
+        animation: fadeIn 1s ease-in-out;
+        background-size: 2700px; 
+        background-position: center; 
+        animation: backgroundTransition 30s infinite;
         }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes backgroundTransition {
+            0% { background-image: url('images/scenic.jpg'); }
+            25% { background-image: url('images/skyline.jpg'); }
+            50% { background-image: url('images/glasses.jpg'); }
+            75% { background-image: url('images/circuits.jpg'); }
+            100% { background-image: url('images/scenic.jpg'); }
+        }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-grow: 1;
             text-align: center;
+            animation: slideIn 1s ease-in-out;
         }
+
+        @keyframes slideIn {
+            from { transform: translateY(15px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
         .content h1 {
             font-size: 3rem;
             margin: 0;
-            transition: transform 0.5s;
+            transition: transform 0.5s ease-in-out;
             display: inline-block;
         }
+
         .content p {
             font-size: 1rem;
             margin-top: 0.5rem;
         }
+
         .menu-icon {
             position: absolute;
             top: 20px;
@@ -42,7 +69,13 @@
             font-size: 2rem;
             cursor: pointer;
             z-index: 10;
+            transition: transform 0.3s ease;
         }
+
+        .menu-icon:hover {
+            transform: rotate(90deg);
+        }
+
         .sidebar {
             position: fixed;
             top: 0;
@@ -54,9 +87,11 @@
             transition: transform 0.3s ease;
             padding-top: 60px;
         }
+
         .sidebar.open {
             transform: translateX(0);
         }
+
         .sidebar a {
             display: block;
             padding: 15px 30px;
@@ -65,22 +100,32 @@
             font-size: 1.2rem;
             transition: background 0.3s;
         }
+
         .sidebar a:hover {
             background: #444;
         }
+
         #title {
-            font-size: 3rem;
+            font-size: 6rem;
             font-family: 'Arial', sans-serif;
-            transition: opacity 0.3s ease; 
+            font-weight: bold;
+            transition: opacity 0.3s ease;
             display: inline-block;
         }
+
         .footer {
             width: 100%;
             text-align: center;
             padding: 10px 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)); 
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
             position: absolute;
             bottom: 0;
+            animation: footerFade 2s ease-in-out;
+        }
+
+        @keyframes footerFade {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .footer a {
@@ -90,29 +135,30 @@
             font-size: 1.2rem;
             transition: color 0.3s;
         }
+
         .footer a:hover {
             color: #2e81f6;
         }
+
         .link-image {
-            width: auto; 
+            width: auto;
             height: 115px;
             margin: 0 15px;
             transition: transform 0.3s ease-in-out;
             padding-bottom: 25px;
         }
 
+        .link-image {
+        width: auto;
+        height: 115px;
+        margin: 0 15px;
+        transition: transform 0.3s ease-in-out;
+        padding-bottom: 25px;
+        }
+
         .link-image:hover {
-            transform: scale(1.1); 
+        transform: scale(1.15);
         }
-
-        #title {
-            font-size: 6rem; /* Increased from 3rem */
-            font-family: 'Arial', sans-serif;
-            font-weight: bold;
-            transition: opacity 0.3s ease; 
-            display: inline-block;
-        }
-
 
     </style>
 </head>
@@ -120,13 +166,13 @@
     <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
     <div class="sidebar" id="sidebar">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Surrounding Scanner</a>
-        <a href="#">Finances</a>
-        <a href="#">Competition</a>
-        <a href="#">Timeline</a>
-        <a href="#">Code</a>
+        <a href="homepage.html">Home</a>
+        <a href="about-us.html">About Us</a>
+        <a href="tss.html">Surrounding Scanner</a>
+        <a href="finances.html">Finances</a>
+        <a href="competition.html">Competition</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="code.html">Code</a>
     </div>
 
     <div class="container">
@@ -139,21 +185,17 @@
     <div class="footer">
         <a href="https://www.tinkercad.com/things/8GJaLu0PdzS-the-surrounding-scanner-externals" target="_blank">
             <img src="images/tinker.png" alt="Tinkercad_ext" class="link-image">
-
-
+        </a>
         <a href="https://www.tinkercad.com/things/0qxaDzLbsuv-the-surrounding-scanner-internals" target="_blank">
             <img src="images/tinker.png" alt="Tinkercad_int" class="link-image">
-
         </a>
         <a href="https://docs.google.com/presentation/d/1BKsKcCPL_m2wtq89GvNm6ka1r9ZUrILN0f24L_rVkKk/edit?usp=sharing" target="_blank">
             <img src="images/slides.png" alt="Google Slides" class="link-image">
-
         </a>
         <a href="https://www.youtube.com/channel/UCce25dALBU-FBtp3x4Mviig" target="_blank">
             <img src="images/utube.webp" alt="YouTube" class="link-image">
         </a>
     </div>
-    
 
     <script>
         function toggleMenu() {
@@ -185,6 +227,18 @@
 
             scrambleLetter(); 
         }
+
+        const preloadImages = [
+            'images/scenic.jpg',
+            'images/skyline.jpg',
+            'images/glasses.jpg',
+            'images/circuits.jpg'
+        ];
+
+        preloadImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
     </script>
 </body>
 </html>
