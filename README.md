@@ -1,6 +1,6 @@
 # VividSense Website
 
-Welcome to the **VividSense** website repository! This website is dedicated to showcasing **VividSense**, innovative wearable glasses designed to help visually impaired individuals navigate their surroundings using ultrasonic sensors.
+Welcome to the **VividSense** repository! This website is dedicated to showcasing **VividSense**, innovative wearable glasses designed to help visually impaired individuals navigate their surroundings using ultrasonic sensors.
 
 ## 📌 Project Overview
 VividSense is a cost-effective solution for enhancing mobility and independence. Using ultrasonic technology, the glasses detect nearby obstacles and alert the wearer via audio feedback, helping them navigate their environment safely and confidently.
