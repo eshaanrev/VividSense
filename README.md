@@ -7,7 +7,7 @@ VividSense is a cost-effective solution for enhancing mobility and independence.
 
 ### Why VividSense?
 - **Affordability:** At ~$35 per unit with a 48% profit margin, VividSense is an accessible solution for those in need.
-- **Innovation:** 85% of profits are reinvested into research and development to improve hardware and efficiency.
+- **Innovation:** 85% of profits are reinvested into research and development to improve hardware and usability.
 - **Scalability:** Our goal is to sell 100,000 units over the next five years, collaborating with retailers and investors for future growth.
 
 ## 🛠️ Features
