@@ -11,7 +11,7 @@ VividSense is a cost-effective solution for enhancing mobility and independence.
 - **Scalability:** Our goal is to sell 100,000 units over the next five years, collaborating with retailers and investors for future growth.
 
 ## 🛠️ Features
-- **Product Showcase:** Detailed information about VividSense and its components.
+- **Product Showcase:** Detailed information about The Surrounding Scanner and its components.
 - **Accessibility-Focused Design:** Ensuring usability for visually impaired users.
 - **Contact & Support:** Reach out for assistance, collaboration, or purchasing inquiries.
 - **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
