@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript" src="darkmode.js" defer></script>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        #image-track > .img{
+            width: 40vmin;
+            height: 56vmin;
+            object-fit: cover;
+            object-position: right;
+            user-select: none;
+            pointer-events: none;
+        }
+        #image-track{
+            display: flex;
+            position: absolute;
+            gap: 4vmin;
+            left: 50%;
+            top: 50%;
+            transform: translate(0%,-50%);
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="subtitle" style="z-index: 3; user-select: none; pointer-events: none;">CLICK & DRAG</h2>
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img class="img" src="tssimg1.png" draggable="false">
+        <img class="img" src="tssimg3.PNG" draggable="false">
+        <img class="img" src="tssimg2.png" draggable="false">
+        <img class="img" src="tssing6.png" draggable="false">
+        <img class="img" src="tssing7.png" draggable="false">
+        <img class="img" src="IMG_0602.png" draggable="false">
+
+
+
+    </div>
+
+    <script>
+        const track = document.getElementById("image-track");
+
+        window.onmousedown = e => {
+            track.dataset.mouseDownAt = e.clientX;
+        }
+
+        window.onmouseup = () => {
+            track.dataset.mouseDownAt = "0";
+            track.dataset.prevPercentage = track.dataset.percentage;
+        }
+
+        window.onmousemove = e => {
+            if (track.dataset.mouseDownAt === "0") return;
+
+            const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
+            const maxDelta = window.innerWidth / 2;
+
+            const percentage = (mouseDelta / maxDelta) * -100;
+            const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
+            const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+            track.dataset.percentage = nextPercentage;
+
+            track.animate({ transform: `translate(${nextPercentage}%, -50%)` }, { duration: 1200, fill: "forwards" });
+
+            for (const image of track.getElementsByClassName("img")) {
+                image.animate({ objectPosition: `${nextPercentage + 100}% center` }, { duration: 1200, fill: "forwards" });
+            }
+        }
+    </script>
+</body>
+</html>
