@@ -1,4 +1,4 @@
-# VividSense Website
+# VividSense
 
 Welcome to the **VividSense** repository! This repository contains code for the **VivdSense** organization website, as well as code from prior generations of VividSense products (e.g. The Surrounding Scanner).
 
