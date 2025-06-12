@@ -10,7 +10,7 @@ The Surrounding Scanner is a cost-effective solution for enhancing mobility and 
 - **Innovation:** 85% of profits are reinvested into research and development to improve hardware and usability.
 - **Scalability:** Our goal is to sell 10,000 units over the next five years, collaborating with retailers and investors for future growth.
 
-## 🛠️ Website Features
+## Website Features
 - **Product Showcase:** Detailed information about The Surrounding Scanner and its components.
 - **Accessibility-Focused Design:** Ensuring usability for visually impaired users.
 - **Contact & Support:** Reach out for assistance, collaboration, or purchasing inquiries.
