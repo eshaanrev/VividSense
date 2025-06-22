@@ -17,3 +17,8 @@ The Surrounding Scanner is a cost-effective solution for enhancing mobility and 
 - **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
 - **Technical Specifications:** Information about the sensor, speaker, motherboard, breadboard, frame, and battery.
 - Visit at "main.vividsense.org".
+
+## Future Endeavors
+- **Stronger Technology** TSS V2 will use a Raspberry Pi 5 to allow for object detection, speaker capabilites, and more accurate distance tracking.
+- **AI Implementation** The Raspberry Pi will be used for AI processing to determine the type of object in front of the user.
+- **Minimizing Size** The new module will be significantly smaller and more portable to enhance convenience.
