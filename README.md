@@ -13,7 +13,6 @@ The Surrounding Scanner is a cost-effective solution for enhancing mobility and 
 ## Website Features
 - **Product Showcase:** Detailed information about The Surrounding Scanner and its components.
 - **Accessibility-Focused Design:** Ensuring usability for visually impaired users.
-- **Contact & Support:** Reach out for assistance, collaboration, or purchasing inquiries.
 - **Responsive Design:** Optimized for desktop, tablet, and mobile devices.
 - **Technical Specifications:** Information about the sensor, speaker, motherboard, breadboard, frame, and battery.
 - Visit at "main.vividsense.org".
