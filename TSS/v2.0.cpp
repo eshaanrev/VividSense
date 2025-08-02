@@ -24,7 +24,7 @@ void loop() {
       tone(PIEZO_PIN, 475);
       delay(200);
       noTone(PIEZO_PIN);
-      delay(100); // Small cooldown to avoid buzzing repeatedly
+      delay(100); // Small cooldown to avoid repeated buzzing
     }
 
     previous_distance = current_distance; // Update for next loop
