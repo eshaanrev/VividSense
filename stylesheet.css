@@ -75,6 +75,44 @@ html {
     left: 0;
 }
 
+/* Pulsing menu icon animation - integrates with existing CSS */
+.menu-icon {
+  animation: pulse-menu 2s infinite;
+}
+
+/* Enhanced hover effect that works with existing rotation */
+.menu-icon:hover {
+  animation-play-state: paused;
+}
+
+@keyframes pulse-menu {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 var(--text-color);
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+    box-shadow: 0 0 0 10px transparent;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+/* Stop pulsing when sidebar is open */
+.sidebar.open ~ .content .menu-icon {
+  animation: none !important;
+}
+
+/* Combine pulse with existing hover rotation */
+.menu-icon:hover {
+  animation-play-state: paused;
+  transform: rotate(90deg) scale(1.1);
+}
 
 /* Default Body */
 body {
